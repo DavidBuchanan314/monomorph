@@ -17,6 +17,7 @@ BANNER = """\
 from collisions import swap_fccoll
 import hashlib
 import zlib
+import os
 
 def set_bit(data, offset, value, hashobj=None):
 	if (data[offset + 0x13] >> 7) ^ value:
@@ -67,6 +68,8 @@ def encode_payload(input_filename, output_filename, payload, activate=True):
 	print(f"[+] Saving to {output_filename!r}")
 	with open(output_filename, "wb") as out:
 		out.write(monomorph)
+	
+	os.chmod(output_filename, 0o775)
 
 if __name__ == "__main__":
 	import sys
