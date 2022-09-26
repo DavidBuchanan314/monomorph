@@ -20,6 +20,12 @@ It packs up to 4KB of compressed shellcode into an executable binary, near-insta
 
 Currently, only Linux x86-64 is supported. It would be trivial to port this technique to other platforms, although each version would end up with a different MD5. It would also be possible to use a multi-platform polyglot file like [APE](https://justine.lol/ape.html).
 
+Example usage:
+
+```
+$ python3 monomorph.py bin/monomorph.linux.x86-64.benign bin/monomorph.linux.x86-64.meterpreter sample_payloads/bin/linux.x64.meterpreter.bind_tcp.bin
+```
+
 ### Why?
 
 People have [previously](https://www.mscs.dal.ca/~selinger/md5collision/) used single collisions to toggle a binary between "good" and "evil" modes. Monomorph takes this concept to the next level.
