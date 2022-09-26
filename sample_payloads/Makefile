@@ -1,6 +1,6 @@
-all: hashquine.bin rickroll.bin
+all: bin/hashquine.bin bin/rickroll.bin
 
-%.bin: %.elf
+bin/%.bin: %.elf
 	python3 elf_to_shellcode.py $< $@
 
 %.elf: %.c
