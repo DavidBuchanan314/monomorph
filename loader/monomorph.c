@@ -8,7 +8,7 @@
 #include <assert.h>
 
 /* 4k ought to be enough for anyone */
-#define BODY_SIZE 0x100
+#define BODY_SIZE 0x1000
 #define MD5_BLOCKSZ 64
 
 /* Each fastcoll block is 2x MD5 blocks */
