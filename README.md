@@ -34,7 +34,7 @@ Some people still insist on using MD5 to reference file samples, for various rea
 
 ## How does it work?
 
-For every bit we want to encode, a colliding MD5 block has been pre-calculated using FastColl. As summarised [here](https://github.com/corkami/collisions/tree/master/hashquines#read-an-encoded-value), each collision gives us a pair of blocks that we can swap out without changing the overall MD5 hash. The loader checks which block was chosen at runtime, to decode the bit.
+For every bit we want to encode, a colliding MD5 block has been pre-calculated using [FastColl](https://github.com/cr-marcstevens/hashclash/tree/master/src/md5fastcoll). As summarised [here](https://github.com/corkami/collisions/tree/master/hashquines#read-an-encoded-value), each collision gives us a pair of blocks that we can swap out without changing the overall MD5 hash. The loader checks which block was chosen at runtime, to decode the bit.
 
 To encode 4KB of data, we need to generate 4\*1024\*8 collisions (which takes a few hours), taking up 4MB of space in the final file.
 
