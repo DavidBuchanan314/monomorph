@@ -46,7 +46,7 @@
  *   the necessary definitions.
  *
  * SYS_ERRNO:
- *   All system calls will update "errno" unless overriden by setting the
+ *   All system calls will update "errno" unless overridden by setting the
  *   SYS_ERRNO macro prior to including this file. SYS_ERRNO should be
  *   an l-value.
  *
@@ -1823,7 +1823,7 @@ struct kernel_statx {
 #ifndef __NR_getcpu
 #define __NR_getcpu             302
 #endif
-/* End of powerpc defininitions                                              */
+/* End of powerpc definitions                                              */
 #elif defined(__s390__)
 #ifndef __NR_quotactl
 #define __NR_quotactl           131
